@@ -13,7 +13,8 @@
 
 <section class="card-container">
   {% for finch in finches %}
-    <div class="card">
+  <div class="card">
+    <a href=" {% url 'finchs_details' finch.id %} ">
       <div class="card-content">
         <img 
         src="{% static '' %}" 
@@ -23,7 +24,9 @@
       <h2 class="card-title">{{finch.name}}</h2>
       <p>{{finch.habitat}}</p>
       <p><small>{{finch.description}}</small></p>
-    </div>
+    </a>
+  </div>
+
   {% endfor %}
 </section>
 

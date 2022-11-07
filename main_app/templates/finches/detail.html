@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/finches/finch-details.css' %}"
+/>
+{% endblock  %}
+
+{% block content %}
+
+<section class="finch-containter">
+  <div class="finch-img">
+    <img src="" alt="">
+  </div>
+  <div class="finch-details">
+    <h1>{{finch.name}}</h1>
+    <h2>{{finch.habitat}}</h2>
+    <p>{{finch.description}}</p>
+  </div>
+</section>
+
+{% endblock  %}
