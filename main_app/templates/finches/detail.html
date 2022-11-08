@@ -20,6 +20,10 @@
     <h2>{{finch.habitat}}</h2>
     <p>{{finch.description}}</p>
   </div>
+  <div class="finch-actions">
+    <a href="{% url 'finchs_update' finch.id %}"><button>Edit</button></a>
+    <a href="{% url 'finch_delete' finch.id %}"><button>Delete</button></a>
+  </div>
 </section>
 
 {% endblock  %}
